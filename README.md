@@ -16,6 +16,15 @@ To fake the hackers, if the port is reached from a HTTP request, it will redirec
 The service is able to send e-mail messages when it is triggered (either by service-start, or port-trigger)<br>
 To achieve this, you have to change the variables in Service1.cs file (code view), lines 27-33<br>
 
+Once you build your RDP_Enabler.exe.exe file, run the "install_service.bat" file as administrator.<br>
+
+Alternatively, you can open a CMD prompt as administrator and put the command as follows: <br>
+
+sc create RDP_Enabler binpath=".\bin\Release\RDP_Enabler.exe"    <br>
+
+Change the path as needed. <br>
+
+
 # USAGE
 
 Install the service and make it "Delayed Start" in service properties. <br>
