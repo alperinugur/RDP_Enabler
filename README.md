@@ -20,9 +20,9 @@ Once you build your RDP_Enabler.exe.exe file, run the "install_service.bat" file
 
 Alternatively, you can open a CMD prompt as administrator and put the command as follows: <br>
   ```bash
-    sc create RDP_Enabler binpath=".\bin\Release\RDP_Enabler.exe" 
-
-Change the path as needed. <br>
+  sc create RDP_Enabler binpath=".\bin\Release\RDP_Enabler.exe" 
+ 
+ Change the path as needed. <br>
 
 
 # USAGE
