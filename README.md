@@ -1,5 +1,8 @@
 # RDP_Enabler
-A service to trigger Remote Desktop Protocol in Windows 10 / Windows 11, to prevent hacking
+A service to trigger Remote Desktop Protocol in Windows 10 / Windows 11, to prevent hacking.<br>
+
+Two way authentication, so that RDP attackers will be blocked. <br>
+
 
 # Requirements
 This is tested on Windows 11. I guess it will work fine with Windows 10 also, and maybe lower versions.
