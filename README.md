@@ -4,28 +4,27 @@ A service to trigger Remote Desktop Protocol in Windows 10 / Windows 11, to prev
 Two way authentication, so that RDP attackers will be blocked. <br>
 
 
-# Requirements
+## Requirements
 This is tested on Windows 11. I guess it will work fine with Windows 10 also, and maybe lower versions.
 
-# Remote Desktop Protocol Security
+## Remote Desktop Protocol Security
 This small service works like a 2 step authentication for RDP. When started, it will disable the RDP access to the computer, and wait for a port trigger. <br>
 Once the port is triggered, the RDP is accessible for 10 minutes. <br>
 To fake the hackers, if the port is reached from a HTTP request, it will redirect to a site. i.e. "www.google.com"
 
-# INSTALLATION
+## INSTALLATION
 The service is able to send e-mail messages when it is triggered (either by service-start, or port-trigger)<br>
 To achieve this, you have to change the variables in Service1.cs file (code view), lines 27-33<br>
 
 Once you build your RDP_Enabler.exe.exe file, run the "install_service.bat" file as administrator.<br>
+**Alternatively, you can open a CMD prompt as administrator and put the command as follows:**
 
-Alternatively, you can open a CMD prompt as administrator and put the command as follows: <br>
-  ```bash
-  sc create RDP_Enabler binpath=".\bin\Release\RDP_Enabler.exe" 
- 
- Change the path as needed. <br>
+    sc create RDP_Enabler binpath=".\bin\Release\RDP_Enabler.exe"
+
+## Change the path as needed.
 
 
-# USAGE
+## USAGE
 
 Install the service and make it "Delayed Start" in service properties. <br>
 Use the System credentials (as default)<br>
